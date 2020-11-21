@@ -17,7 +17,8 @@ with open('planning.json', encoding="utf8") as json_file:
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, 'PROG.Kyiv.UA')
+    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+    bot.reply_to(message, 'Presenting  PROG.Kyiv.UA')
 
 
 @bot.message_handler(commands=['help'])
