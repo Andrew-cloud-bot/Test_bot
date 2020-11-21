@@ -14,6 +14,7 @@ with open('courses.txt') as file:
 with open('planning.json', encoding="utf8") as json_file:
     data = json.load(json_file)
 
+
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message, 'PROG.Kyiv.UA')
@@ -56,8 +57,8 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://git.heroku.com/andrew-new-bot.git' + TOKEN)
-    return "Python Telegram Bot 21-11-2020", 200
+    bot.set_webhook(url='https://andrew-new-bot.herokuapp.com/' + TOKEN)
+    return "Andrew_new_Bot 21-11-2020", 200
 
 
 if __name__ == "__main__":
