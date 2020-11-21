@@ -56,7 +56,7 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url='https://python-test-bot-21-11-2020.herokuapp.com/' + TOKEN)
+    bot.set_webhook(url='https://git.heroku.com/andrew-new-bot.git' + TOKEN)
     return "Python Telegram Bot 21-11-2020", 200
 
 
